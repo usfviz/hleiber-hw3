@@ -80,7 +80,7 @@ server <- function(input, output) {
                      panel.grid.minor = element_line(colour = "grey"),
                      panel.border = element_rect(colour="black", fill = NA),
                      plot.margin = unit(c(1,1,1,1), "cm")),
-   tooltip = c("text"), height = 500, width = 700)
+   tooltip = c("text"))
   })
 
 }
