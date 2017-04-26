@@ -6,7 +6,6 @@ library(shiny)
 library(plotly)
 library(reshape2)
 library(ggplot2)
-library(dplyr)
 
 data <- read.csv("dataset_Facebook.csv", sep=";")
 data <- data[complete.cases(data),]
