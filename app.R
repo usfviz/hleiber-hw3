@@ -1,11 +1,13 @@
 if (!require("plotly")) {install.packages("plotly")}
 if (!require("reshape2")) {install.packages("reshape2")}
 if (!require("ggplot2")) {install.packages("ggplot2")}
+if (!require("GGally")) {install.packages("GGally")}
 
 library(shiny)
 library(plotly)
 library(reshape2)
 library(ggplot2)
+library(GGally)
 
 data <- read.csv("dataset_Facebook.csv", sep=";")
 data <- data[complete.cases(data),]
