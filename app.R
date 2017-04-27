@@ -2,12 +2,14 @@ if (!require("plotly")) {install.packages("plotly")}
 if (!require("reshape2")) {install.packages("reshape2")}
 if (!require("ggplot2")) {install.packages("ggplot2")}
 if (!require("GGally")) {install.packages("GGally")}
+if (!require("scales")) {install.packages("scales")}
 
 library(shiny)
 library(plotly)
 library(reshape2)
 library(ggplot2)
 library(GGally)
+library(scales)
 
 data <- read.csv("dataset_Facebook.csv", sep=";")
 data <- data[complete.cases(data),]
@@ -50,7 +52,7 @@ server <- function(input, output) {
                  colour="black", alpha = 0.8) +
        xlab("Number of Likes") +
        ylab("Number of Shares") +
-      scale_y_continuous(labels = comma) + 
+      scale_x_continuous(labels = comma) + 
       scale_size(guide = 'none') +
       scale_fill_manual(values=c("#1B9E77", "#7570B3", "#E7298A", "#E6AB02"), name="") +
       theme(panel.background = element_blank(),
